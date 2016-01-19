@@ -1,0 +1,7 @@
+C:\Users\Toni\Downloads\11. Unit-Testing-Homework\11. Unit-Testing-Homework\CustomLinkedList\CustomLinkedListTests\bin\Debug\CustomLinkedListTests.dll
+C:\Users\Toni\Downloads\11. Unit-Testing-Homework\11. Unit-Testing-Homework\CustomLinkedList\CustomLinkedListTests\bin\Debug\CustomLinkedListTests.pdb
+C:\Users\Toni\Downloads\11. Unit-Testing-Homework\11. Unit-Testing-Homework\CustomLinkedList\CustomLinkedListTests\bin\Debug\CustomLinkedList.dll
+C:\Users\Toni\Downloads\11. Unit-Testing-Homework\11. Unit-Testing-Homework\CustomLinkedList\CustomLinkedListTests\bin\Debug\CustomLinkedList.pdb
+C:\Users\Toni\Downloads\11. Unit-Testing-Homework\11. Unit-Testing-Homework\CustomLinkedList\CustomLinkedListTests\obj\Debug\CustomLinkedListTests.csprojResolveAssemblyReference.cache
+C:\Users\Toni\Downloads\11. Unit-Testing-Homework\11. Unit-Testing-Homework\CustomLinkedList\CustomLinkedListTests\obj\Debug\CustomLinkedListTests.dll
+C:\Users\Toni\Downloads\11. Unit-Testing-Homework\11. Unit-Testing-Homework\CustomLinkedList\CustomLinkedListTests\obj\Debug\CustomLinkedListTests.pdb

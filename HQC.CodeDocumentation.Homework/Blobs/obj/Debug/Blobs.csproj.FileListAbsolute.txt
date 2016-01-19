@@ -1,0 +1,12 @@
+c:\users\toni\documents\visual studio 2013\Projects\OOP_Exam\Blobs\bin\Debug\Blobs.exe.config
+c:\users\toni\documents\visual studio 2013\Projects\OOP_Exam\Blobs\obj\Debug\Blobs.csprojResolveAssemblyReference.cache
+c:\users\toni\documents\visual studio 2013\Projects\OOP_Exam\Blobs\bin\Debug\Blobs.exe
+c:\users\toni\documents\visual studio 2013\Projects\OOP_Exam\Blobs\bin\Debug\Blobs.pdb
+c:\users\toni\documents\visual studio 2013\Projects\OOP_Exam\Blobs\obj\Debug\Blobs.exe
+c:\users\toni\documents\visual studio 2013\Projects\OOP_Exam\Blobs\obj\Debug\Blobs.pdb
+C:\Users\Toni\Documents\Visual Studio 2013\Projects\Object Oriented Programming Softuni\OOP_Exam\Blobs\bin\Debug\Blobs.exe.config
+C:\Users\Toni\Documents\Visual Studio 2013\Projects\Object Oriented Programming Softuni\OOP_Exam\Blobs\bin\Debug\Blobs.exe
+C:\Users\Toni\Documents\Visual Studio 2013\Projects\Object Oriented Programming Softuni\OOP_Exam\Blobs\bin\Debug\Blobs.pdb
+C:\Users\Toni\Documents\Visual Studio 2013\Projects\Object Oriented Programming Softuni\OOP_Exam\Blobs\obj\Debug\Blobs.csprojResolveAssemblyReference.cache
+C:\Users\Toni\Documents\Visual Studio 2013\Projects\Object Oriented Programming Softuni\OOP_Exam\Blobs\obj\Debug\Blobs.exe
+C:\Users\Toni\Documents\Visual Studio 2013\Projects\Object Oriented Programming Softuni\OOP_Exam\Blobs\obj\Debug\Blobs.pdb

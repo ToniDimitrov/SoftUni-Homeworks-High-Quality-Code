@@ -1,0 +1,2 @@
+c:\users\toni\documents\visual studio 2013\Projects\HQC.CodeDocumentation.Homework\1.StringExtensions\bin\Debug\1.StringExtensions.exe.config
+C:\Users\Toni\Documents\Visual Studio 2013\HQC.CodeDocumentation.Homework\1.StringExtensions\bin\Debug\1.StringExtensions.exe.config

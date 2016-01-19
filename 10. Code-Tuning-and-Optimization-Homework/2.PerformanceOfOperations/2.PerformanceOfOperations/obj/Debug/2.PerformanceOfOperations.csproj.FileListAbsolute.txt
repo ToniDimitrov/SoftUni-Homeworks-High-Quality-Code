@@ -1,0 +1,5 @@
+C:\Users\Toni\Downloads\10. Code-Tuning-and-Optimization-Homework\2.PerformanceOfOperations\2.PerformanceOfOperations\bin\Debug\2.PerformanceOfOperations.exe.config
+C:\Users\Toni\Downloads\10. Code-Tuning-and-Optimization-Homework\2.PerformanceOfOperations\2.PerformanceOfOperations\bin\Debug\2.PerformanceOfOperations.exe
+C:\Users\Toni\Downloads\10. Code-Tuning-and-Optimization-Homework\2.PerformanceOfOperations\2.PerformanceOfOperations\bin\Debug\2.PerformanceOfOperations.pdb
+C:\Users\Toni\Downloads\10. Code-Tuning-and-Optimization-Homework\2.PerformanceOfOperations\2.PerformanceOfOperations\obj\Debug\2.PerformanceOfOperations.exe
+C:\Users\Toni\Downloads\10. Code-Tuning-and-Optimization-Homework\2.PerformanceOfOperations\2.PerformanceOfOperations\obj\Debug\2.PerformanceOfOperations.pdb
