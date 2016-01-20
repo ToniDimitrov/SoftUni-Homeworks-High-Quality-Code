@@ -11,245 +11,276 @@ namespace CustomLinkedListTests
     [TestClass]
     public class DynamicListTests
     {
-        private DynamicList<int> dynamicList;
+        private DynamicList<ValueType> dynamicListValueType;
 
         [TestInitialize]
         public void InitializeList()
         {
-            dynamicList = new DynamicList<int>();
+            this.dynamicListValueType = new DynamicList<ValueType>();
         }
 
         [TestMethod]
-        [ExpectedException(typeof (ArgumentOutOfRangeException))]
-        public void TestIndexerGetter_NegativeValue_ShouldThrowException()
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void TestIndexerGetter_NegativeIndex_ShouldThrowException()
         {
-            int testElement = dynamicList[-9];
+            var testElement = this.dynamicListValueType[-9];
         }
 
         [TestMethod]
-        [ExpectedException(typeof (ArgumentOutOfRangeException))]
-        public void TestIndexerGetter_OutsideOfRangeOfList_ShouldThrowException()
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void TestIndexerGetter_IndexLargerThanElementsCount_ShouldThrowException()
         {
-            int testCount = dynamicList.Count + 1;
-            int testElement = dynamicList[testCount];
+            var testCount = this.dynamicListValueType.Count + 1;
+            var testElement = this.dynamicListValueType[testCount];
         }
 
         [TestMethod]
-        public void TestIndexerGetter_TestWithCorrectInput()
+        public void TestIndexerGetter_CorrectInput()
         {
-            dynamicList.Add(5);
+            this.dynamicListValueType.Add(5.1334);
 
-            int expectedElement = 5;
+            ValueType expectedElement = 5.1334;
 
-            Assert.AreEqual(expectedElement, dynamicList[0]);
+            Assert.AreEqual(expectedElement, this.dynamicListValueType[0], "The indexer getter doesn't return the right value");
         }
 
         [TestMethod]
-        [ExpectedException(typeof (ArgumentOutOfRangeException))]
-        public void TestIntexerSetter_NegativeValue_ShouldThrowException()
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void TestIntexerSetter_NegativeIndex_ShouldThrowException()
         {
-            dynamicList[-1] = 5;
+            this.dynamicListValueType[-1] = 5;
         }
 
         [TestMethod]
-        [ExpectedException(typeof (ArgumentOutOfRangeException))]
-        public void TestIntexerSetter_OutsideOfRangeOfList_ShouldThrowException()
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void TestIntexerSetter_IndexLargerThanElementsCount_ShouldThrowException()
         {
-            int testCount = dynamicList.Count + 1;
-            dynamicList[testCount] = 5;
+            var testCount = this.dynamicListValueType.Count + 1;
+            this.dynamicListValueType[testCount] = 5;
         }
 
         [TestMethod]
-        public void TestIndexerSetter_TestWithCorrectInput()
+        public void TestIndexerSetter_CorrectInput()
         {
-            dynamicList.Add(10);
+            this.dynamicListValueType.Add(10);
 
-            dynamicList[0] = 19;
-            int expectedElement = 19;
+            this.dynamicListValueType[0] = 17777777777965465440;
+            var expectedElement = 17777777777965465440;
 
-            Assert.AreEqual(expectedElement, dynamicList[0]);
+            Assert.AreEqual(expectedElement, this.dynamicListValueType[0], "The indexer setter doesn't set the right value");
         }
 
         [TestMethod]
         public void TestAdd_EmptyList()
         {
-            dynamicList.Add(22);
+            this.dynamicListValueType.Add(22);
 
-            int expectedElement = 22;
+            var expectedElement = 22;
 
-            Assert.AreEqual(expectedElement, dynamicList[dynamicList.Count - 1]);
+            Assert.AreEqual(expectedElement, this.dynamicListValueType[this.dynamicListValueType.Count - 1],
+                "The add method doesn't add the right element in an empty list");
         }
 
         [TestMethod]
         public void TestAdd_NonEmptyList()
         {
-            dynamicList.Add(22);
-            dynamicList.Add(44);
-            dynamicList.Add(88);
+            this.dynamicListValueType.Add(22);
+            this.dynamicListValueType.Add(44);
+            this.dynamicListValueType.Add(88);
 
-            int expectedElement = 88;
+            var expectedElement = 88;
 
-            Assert.AreEqual(expectedElement, dynamicList[dynamicList.Count - 1]);
+            Assert.AreEqual(expectedElement, this.dynamicListValueType[this.dynamicListValueType.Count - 1],
+                "The add method doesn't add the right element in a non-empty list");
         }
 
         [TestMethod]
         public void TestCountIncrementation_Add()
         {
-            dynamicList.Add(22);
-            dynamicList.Add(33);
+            this.dynamicListValueType.Add(22);
+            this.dynamicListValueType.Add(33);
 
-            int expectedCount = 2;
+            var expectedCount = 2;
 
-            Assert.AreEqual(expectedCount, dynamicList.Count);
+            Assert.AreEqual(expectedCount, this.dynamicListValueType.Count,
+                "The add method doesn't increment the elements count when adding new element");
         }
 
         [TestMethod]
-        [ExpectedException(typeof (ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void TestRemoveAt_NegativeIndex_ShouldThrowException()
         {
-            dynamicList.RemoveAt(-5);
+            this.dynamicListValueType.RemoveAt(-5);
         }
 
         [TestMethod]
-        [ExpectedException(typeof (ArgumentOutOfRangeException))]
-        public void TestRemoveAt_IndexOutsideOfRange_ShouldThrowException()
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void TestRemoveAt_IndexLargerThanElementsCount_ShouldThrowException()
         {
-            dynamicList.RemoveAt(dynamicList.Count + 1);
+            this.dynamicListValueType.RemoveAt(this.dynamicListValueType.Count + 1);
         }
 
         [TestMethod]
-        public void TestRemoveAt_CorrectInput()
+        public void TestRemoveAt_ValueContainedInList()
         {
-            dynamicList.Add(22);
-            dynamicList.Add(33);
-            dynamicList.Add(44);
+            this.dynamicListValueType.Add(22);
+            this.dynamicListValueType.Add(33);
+            this.dynamicListValueType.Add(44);
 
-            int expectedElement = 33;
+            var expectedElement = 33;
 
-            Assert.AreEqual(expectedElement, dynamicList.RemoveAt(1));
+            Assert.AreEqual(expectedElement, this.dynamicListValueType.RemoveAt(1),
+                "The RemoveAt method doesn't return the right element");
         }
 
         [TestMethod]
         public void TestCountDecrementation_RemoveAt()
         {
-            dynamicList.Add(22);
-            dynamicList.Add(33);
-            dynamicList.Add(44);
+            this.dynamicListValueType.Add(22);
+            this.dynamicListValueType.Add(33);
+            this.dynamicListValueType.Add(44);
 
-            dynamicList.RemoveAt(1);
+            this.dynamicListValueType.RemoveAt(1);
 
-            int expectedCount = 2;
+            var expectedCount = 2;
 
-            Assert.AreEqual(expectedCount, dynamicList.Count);
+            Assert.AreEqual(expectedCount, this.dynamicListValueType.Count,
+                "The RemoveAt method doesn't decrement the elements count when removing an element");
         }
 
         [TestMethod]
         public void TestIfElementRemoved_RemoveAt()
         {
-            dynamicList.Add(22);
-            dynamicList.Add(33);
-            dynamicList.Add(44);
+            this.dynamicListValueType.Add(22);
+            this.dynamicListValueType.Add(33);
+            this.dynamicListValueType.Add(44);
 
-            dynamicList.RemoveAt(1);
-
-            int elementToBeRemoved = 33;
+            var elementToBeRemoved = this.dynamicListValueType.RemoveAt(1); ;
 
             bool isElementRemoved = true;
-            for (int i = 0; i < dynamicList.Count; i++)
+            for (var i = 0; i < this.dynamicListValueType.Count; i++)
             {
-                if (dynamicList[i].Equals(elementToBeRemoved))
+                if (this.dynamicListValueType[i].Equals(elementToBeRemoved))
                 {
                     isElementRemoved = false;
                 }
             }
 
-            Assert.IsTrue(isElementRemoved);
+            Assert.AreEqual(true, isElementRemoved, "The RemoveAt method doesn't remove the element");
         }
 
         [TestMethod]
-        public void TestRemove_CorrectInput()
+        public void TestRemove_ValueContainedInList()
         {
-            dynamicList.Add(22);
-            dynamicList.Add(33);
-            dynamicList.Add(44);
+            this.dynamicListValueType.Add(22);
+            this.dynamicListValueType.Add(33);
+            this.dynamicListValueType.Add(44);
 
-            int expectedIndex = 1;
+            ValueType expectedIndex = 1;
 
-            Assert.AreEqual(expectedIndex, dynamicList.Remove(33));
+            Assert.AreEqual(expectedIndex, this.dynamicListValueType.Remove(33),
+                "The Remove method doesn't return the right element");
         }
 
         [TestMethod]
-        public void TestRemove_IncorrectInput()
+        public void TestRemove_ValueNotContainedInList()
         {
-            dynamicList.Add(22);
-            dynamicList.Add(33);
-            dynamicList.Add(44);
+            this.dynamicListValueType.Add(22);
+            this.dynamicListValueType.Add(33);
+            this.dynamicListValueType.Add(44);
 
-            int excpetedResult = -1;
+            var excpetedResult = -1;
 
-            Assert.AreEqual(excpetedResult, dynamicList.Remove(55));
+            Assert.AreEqual(excpetedResult, this.dynamicListValueType.Remove(55),
+                "The Remove method doesn't return the right value when given element not present in the list");
+        }
+
+        [TestMethod]
+        public void TestIfElementRemoved_Remove()
+        {
+            this.dynamicListValueType.Add(22);
+            this.dynamicListValueType.Add(33);
+            this.dynamicListValueType.Add(44);
+
+            var elementToBeRemoved = this.dynamicListValueType.Remove(1); ;
+
+            bool isElementRemoved = true;
+            for (var i = 0; i < this.dynamicListValueType.Count; i++)
+            {
+                if (this.dynamicListValueType[i].Equals(elementToBeRemoved))
+                {
+                    isElementRemoved = false;
+                }
+            }
+
+            Assert.AreEqual(true, isElementRemoved, "The Remove method doesn't remove the element");
         }
 
         [TestMethod]
         public void TestCountDecrementation_Remove()
         {
-            dynamicList.Add(22);
-            dynamicList.Add(33);
-            dynamicList.Add(44);
+            this.dynamicListValueType.Add(22);
+            this.dynamicListValueType.Add(33);
+            this.dynamicListValueType.Add(44);
 
-            dynamicList.Remove(33);
+            this.dynamicListValueType.Remove(33);
 
-            int expectedCount = 2;
+            var expectedCount = 2;
 
-            Assert.AreEqual(expectedCount, dynamicList.Count);
+            Assert.AreEqual(expectedCount, this.dynamicListValueType.Count,
+                "The remove method doesn't decrement the elements count when removing an element");
         }
 
         [TestMethod]
-        public void TestIndexOf_CorrectInput()
+        public void TestIndexOf_ValueContainedInList()
         {
-            dynamicList.Add(22);
-            dynamicList.Add(33);
-            dynamicList.Add(44);
+            this.dynamicListValueType.Add(22);
+            this.dynamicListValueType.Add(33);
+            this.dynamicListValueType.Add(44);
 
-            int expectedIndex = 1;
+            var expectedIndex = 1;
 
-            Assert.AreEqual(expectedIndex, dynamicList.IndexOf(33));
+            Assert.AreEqual(expectedIndex, this.dynamicListValueType.IndexOf(33),
+                "The IndexOf method doesn't return the right index when given element contained in the list");
         }
 
         [TestMethod]
-        public void TestIndexOf_IncorrectInput()
+        public void TestIndexOf_ValueNotContainedInList()
         {
-            dynamicList.Add(22);
-            dynamicList.Add(33);
-            dynamicList.Add(44);
+            this.dynamicListValueType.Add(22);
+            this.dynamicListValueType.Add(33);
+            this.dynamicListValueType.Add(44);
 
-            int expectedResult = -1;
+            var expectedResult = -1;
 
-            Assert.AreEqual(expectedResult, dynamicList.IndexOf(55));
+            Assert.AreEqual(expectedResult, this.dynamicListValueType.IndexOf(55),
+                "The IndexOf method doesn't return the right value when given value not contained in the list");
         }
 
         [TestMethod]
-        public void TestContains_CorrectInput()
+        public void TestContains_ValueContainedInList()
         {
-            dynamicList.Add(22);
-            dynamicList.Add(33);
-            dynamicList.Add(44);
+            this.dynamicListValueType.Add(22);
+            this.dynamicListValueType.Add(33);
+            this.dynamicListValueType.Add(44);
 
             bool expectedResult = true;
 
-            Assert.AreEqual(expectedResult, dynamicList.Contains(22));
+            Assert.AreEqual(expectedResult, this.dynamicListValueType.Contains(22),
+                "The Contains method can't find the element");
         }
 
         [TestMethod]
-        public void TestContains_IncorrectInput()
+        public void TestContains_ValueNotContainedInList()
         {
-            dynamicList.Add(22);
-            dynamicList.Add(33);
-            dynamicList.Add(44);
+            this.dynamicListValueType.Add(22);
+            this.dynamicListValueType.Add(33.135464644444686);
+            this.dynamicListValueType.Add(44);
 
             bool expectedResult = false;
 
-            Assert.AreEqual(expectedResult,dynamicList.Contains(55));
+            Assert.AreEqual(expectedResult, this.dynamicListValueType.Contains(55),
+                "The contains method doesn't return the right value when given element not contained in the list");
         }
     }
 }
