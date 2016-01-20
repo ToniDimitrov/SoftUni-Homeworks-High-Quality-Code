@@ -41,10 +41,7 @@ namespace CustomLinkedList
 
         public int Count
         {
-            get
-            {
-                return this.count;
-            }
+            get { return this.count; }
         }
 
         /// <summary>
@@ -96,6 +93,11 @@ namespace CustomLinkedList
         /// <param name="item">The element to be added</param>
         public void Add(T item)
         {
+            if (item == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             if (this.head == null)
             {
                 // We have an empty list -> create a new head and tail
@@ -151,6 +153,11 @@ namespace CustomLinkedList
         /// <returns>The index of the element or -1 if it does not exist</returns>
         public int Remove(T item)
         {
+            if (item == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             // Find the element containing the searched item
             int currentIndex = 0;
             ListNode currentNode = this.head;
@@ -186,6 +193,11 @@ namespace CustomLinkedList
         /// </returns>
         public int IndexOf(T item)
         {
+            if (item == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             int index = 0;
             ListNode currentNode = this.head;
             while (currentNode != null)
@@ -211,6 +223,11 @@ namespace CustomLinkedList
         /// </returns>
         public bool Contains(T item)
         {
+            if (item == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             int index = IndexOf(item);
             bool found = index != -1;
             return found;
