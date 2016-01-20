@@ -81,17 +81,6 @@ namespace CustomLinkedListTests
                 "The add method doesn't add the right element in an empty list");
         }
 
-        public void TestAdd_EmptyList_RefType()
-        {
-            List<string> testList = new List<string>();
-            this.dynamicList.Add(testList);
-
-            var expectedElement = testList;
-
-            Assert.AreSame(expectedElement, this.dynamicList[this.dynamicList.Count - 1],
-                "The add method doesn't add the right element in an empty list");
-        }
-
         [TestMethod]
         public void TestAdd_NonEmptyList()
         {
