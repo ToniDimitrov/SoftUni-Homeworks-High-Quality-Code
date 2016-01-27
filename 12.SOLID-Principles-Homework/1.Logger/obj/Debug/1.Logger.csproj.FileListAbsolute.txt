@@ -1,0 +1,12 @@
+c:\users\user\documents\visual studio 2015\Projects\High-Quality-Code-SOLID-Principles-Homework\1.Logger\bin\Debug\1.Logger.exe.config
+c:\users\user\documents\visual studio 2015\Projects\High-Quality-Code-SOLID-Principles-Homework\1.Logger\obj\Debug\1.Logger.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\High-Quality-Code-SOLID-Principles-Homework\1.Logger\bin\Debug\1.Logger.exe
+c:\users\user\documents\visual studio 2015\Projects\High-Quality-Code-SOLID-Principles-Homework\1.Logger\bin\Debug\1.Logger.pdb
+c:\users\user\documents\visual studio 2015\Projects\High-Quality-Code-SOLID-Principles-Homework\1.Logger\obj\Debug\1.Logger.exe
+c:\users\user\documents\visual studio 2015\Projects\High-Quality-Code-SOLID-Principles-Homework\1.Logger\obj\Debug\1.Logger.pdb
+C:\Users\Toni\Downloads\Homework-ToniBeliyashki-SOLID and other principles\1.Logger\obj\Debug\1.Logger.pdb
+C:\Users\Toni\Downloads\Homework-ToniBeliyashki-SOLID and other principles\1.Logger\obj\Debug\1.Logger.csprojResolveAssemblyReference.cache
+C:\Users\Toni\Downloads\Homework-ToniBeliyashki-SOLID and other principles\1.Logger\bin\Debug\1.Logger.pdb
+C:\Users\Toni\Downloads\Homework-ToniBeliyashki-SOLID and other principles\1.Logger\bin\Debug\1.Logger.dll.config
+C:\Users\Toni\Downloads\Homework-ToniBeliyashki-SOLID and other principles\1.Logger\bin\Debug\1.Logger.dll
+C:\Users\Toni\Downloads\Homework-ToniBeliyashki-SOLID and other principles\1.Logger\obj\Debug\1.Logger.dll
